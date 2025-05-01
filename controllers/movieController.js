@@ -1,27 +1,27 @@
 
 
 
-const createMovie = async (req, res) => {
+const createMovie = (req, res) => {
   res.send("Create movies");
 }
 
 
-const getMovieS = async (req, res) => {
+const getMovieS = (req, res) => {
   res.send("Get all movie lists");
 }
 
 
-const getMovie = async (req, res) => {
+const getMovie = (req, res) => {
   res.send("Get one movie");
 }
 
 
-const updateMovie = async (req, res) => {
+const updateMovie = (req, res) => {
   res.send("Update the movie");
 }
 
 
-const deleteMovie = async (req, res) => {
+const deleteMovie = (req, res) => {
   res.send("Delete movie");
 }
 
