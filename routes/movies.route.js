@@ -1,9 +1,21 @@
-import express from "express"
+import express from "express";
+
+import movieController from "../controllers/movieController.js";
+
+//const { createMovie, deleteMovie, getMovie, getMovieS, updateMovie } = movieController;
 
 const movieRouter = express.Router() 
 
 
 // CRUD functionality of movies
+movieRouter.route("/")
+.post(movieController.createMovie)
+.get(movieController.getMovieS)
+
+movieRouter.route("/:id")
+.get(movieController.getMovie)
+.put(movieController.updateMovie)
+.delete(movieController.deleteMovie)
 
 movieRouter.get("/", (req, res) => {
   //res.json({message: "Hello World!"});
