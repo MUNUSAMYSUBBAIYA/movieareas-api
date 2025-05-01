@@ -1,8 +1,11 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import movieRouter from "./routes/movies.route.js";
 import connectDB from "./lib/db.js";
 
 const app = express();
+
+app.use(express.json());
+app.use(urlencoded({extended: true}));
 
 // Connect DB
 connectDB();
